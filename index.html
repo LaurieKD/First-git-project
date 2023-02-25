@@ -10,9 +10,204 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>Document</title>
+		<script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+		<title>Weather app</title>
+
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<link
+			href="src/styles.css"
+			rel="stylesheet"
+		/>
+
+		<script
+			src="https://kit.fontawesome.com/599531def1.js"
+			crossorigin="anonymous"
+		></script>
+
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<h1>Hello Git</h1>
+		<div class="container">
+			<div class="box">
+				<div class="container text-center">
+					<div class="row align-items-end">
+						<div class="col-7">
+							<div class="card">
+								<form id="cityInput">
+									<div class="col">
+										<input
+											type="submit"
+											value="Current weather at your location"
+											class="form-control button-current-location"
+											id="current-location-button"
+										/>
+									</div>
+									<div class="row">
+										<div class="col-8">
+											<input
+												type="search"
+												class="form-control"
+												id="exampleInputEmail1"
+												aria-describedby="emailHelp"
+												placeholder="Enter a city"
+												autocomplete="off"
+											/>
+										</div>
+										<div class="col-4">
+											<input
+												type="submit"
+												value="Search"
+												class="form-control"
+												id="search"
+											/>
+										</div>
+									</div>
+								</form>
+
+								<div class="card-body block-today">
+									<h1 class="card-title city">The Hague</h1>
+									<div class="container text-center">
+										<div class="row align-items-end">
+											<div class="col-4 today">
+												<span id="day-time">Wednesday 18:00</span>
+												<br />
+												<span id="weather-description">Partly cloudy</span>
+											</div>
+
+											<div class="col-8 temperature-today">
+												<img
+													class="big-image"
+													src="images/partly cloudy.png"
+												/><span id="temp">11</span
+												><span class="temp"
+													><a
+														href="#"
+														class="celcius"
+														>°C</a
+													>
+													|
+													<a
+														href="#"
+														class="fahrenheit"
+														>°F</a
+													></span
+												>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-5">
+							<div class="card">
+								<div class="card-body">
+									<div class="container text-center">
+										<div class="row align-items-end">
+											<div class="col extra-info">
+												<ul>
+													<li>Humidity: <span id="humidity">73</span>%</li>
+													<li>Wind: <span id="wind">18</span>km/h</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<br />
+				<br />
+
+				<div class="container text-center">
+					<div class="row align-items-start">
+						<div class="col">
+							<div class="card">
+								<h5 class="card-title day">Wed</h5>
+								<img
+									src="images/partly cloudy.png"
+									class="card-img-top"
+									alt="Partly cloudy"
+								/>
+								<div class="card-body">
+									<p class="card-text"><span class="warm">11° </span> 6°</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<h5 class="card-title day">Thu</h5>
+								<img
+									src="images/lots of rain.png"
+									class="card-img-top"
+									alt="Lots of rain"
+								/>
+								<div class="card-body">
+									<p class="card-text"><span class="warm">9° </span> 8°</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<h5 class="card-title day">Fri</h5>
+								<img
+									src="images/cloudy.png"
+									class="card-img-top"
+									alt="Cloudy"
+								/>
+								<div class="card-body">
+									<p class="card-text"><span class="warm">11° </span> 7°</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<h5 class="card-title day">Sat</h5>
+								<img
+									src="images/lots of rain.png"
+									class="card-img-top"
+									alt="Lots of rain"
+								/>
+								<div class="card-body">
+									<p class="card-text"><span class="warm">9° </span> 5°</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<h5 class="card-title day">Sun</h5>
+								<img
+									src="images/bit of rain.png"
+									class="card-img-top"
+									alt="Bit of rain"
+								/>
+								<div class="card-body">
+									<p class="card-text"><span class="warm">8° </span> 4°</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="src/app.js"></script>
 	</body>
 </html>

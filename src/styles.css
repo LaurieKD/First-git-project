@@ -1,0 +1,78 @@
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+.box {
+	max-width: 800px;
+	margin: 50px auto;
+	padding: 40px 40px;
+	border: solid;
+	border-radius: 6px;
+	border-color: lightgrey;
+	box-shadow: 0px 0px 10px lightgrey;
+	border-width: 1px;
+	background: #edede9;
+}
+
+.form-control {
+	border-color: lightgrey;
+	box-shadow: 0px 0px 5px lightgrey;
+}
+
+.button-current-location {
+	margin: 0px 0px 20px 0px;
+	background: #53a548;
+	border-color: #53a548;
+	box-shadow: 0px 0px 5px grey;
+	font-size: larger;
+	color: white;
+}
+.city {
+	text-align: left;
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.today {
+	text-align: left;
+	padding: 0px;
+}
+
+.temperature-today {
+	font-weight: 600;
+	text-align: left;
+	font-size: 40px;
+}
+
+.temp {
+	font-weight: 300;
+	font-size: 20px;
+	padding: 0px 0px 0px 5px;
+}
+.extra-info {
+	text-align: left;
+}
+
+.big-image {
+	width: max-content;
+	padding: 0px 10px 0px 0px;
+}
+
+.card {
+	background: transparent;
+	border: none;
+}
+
+.day {
+	margin: 10px 0px;
+}
+
+.card-img-top {
+	display: block;
+	margin: 0 auto;
+	max-width: 64px;
+}
+
+.warm {
+	font-weight: bold;
+}
