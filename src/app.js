@@ -67,4 +67,4 @@ searchBar.addEventListener("submit", handleSubmit);
 let buttonCurrentLocation = document.querySelector("#current-location-button");
 buttonCurrentLocation.addEventListener("click", getCurrentLocation);
 
-searchCity("Amsterdam");
+searchCity("The Hague");
